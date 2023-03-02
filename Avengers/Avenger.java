@@ -1,5 +1,6 @@
 package Avengers;
 import java.util.Comparator;
+
 /** 
  * COMP 2503 Winter 2023 Assignment 1 
  * 
@@ -7,19 +8,18 @@ import java.util.Comparator;
  *
  * @author Raphael Khan, Aulphrine Sagudan, Helga Shu Azinwi
 */
-
 public class Avenger implements Comparable <Avenger>
 {
 	private int count=0;
 	private String alias ="";
 	private String name ="";	
+	
 /**
  * 
  * The Constructor, take note, there are no setters as I do not want people having access to change the info after it is already set.
  * @param aliasInput the alias to be assigned
  * @param nameInput the name to be assigned
  */
-
 	public Avenger(String aliasInput, String nameInput)
 	{
 		count = 1;
@@ -82,7 +82,6 @@ public class Avenger implements Comparable <Avenger>
 	 * This method just increases the count field of an Avenger object by one. I opted to not include a "setQuantity" method as it was not necessary
 	 * 
 	 */
-
 	public void addQuantity()
 	{
 		count++;

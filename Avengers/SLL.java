@@ -2,17 +2,31 @@ package Avengers;
 
 import java.util.Comparator;
 
+/**
+ * 
+ * 
+ *
+ * @param <T>
+ */
 public class SLL<T extends Comparable<T>> {
 	
 	private Node<T> head, tail;
 	
 	private int size;
-
+	
+	/**
+	 * 
+	 */
 	SLL(){
 		head= null;
 		tail=null;
 		size=0;
 	}
+	
+	/**
+	 * 
+	 * @param newItem
+	 */
 	public void add(T newItem){
 		Node<T> newNode = new Node<T>(newItem);
 		if(head!=null)
@@ -32,6 +46,12 @@ public class SLL<T extends Comparable<T>> {
 			size++;
 		}
 	}
+	
+	/**
+	 * 
+	 * @param newItem
+	 * @param comparator
+	 */
 	public void addInOrder(T newItem, Comparator<T> comparator){	
 		Node<T> newNode = new Node<T>(newItem);
 		if (head==null) {	
@@ -63,6 +83,11 @@ public class SLL<T extends Comparable<T>> {
 			}
 		}
 	}
+	
+	/**
+	 * 
+	 * @param newItem
+	 */
 	public void addInOrder(T newItem){
 		
 		Node<T> newNode = new Node<T>(newItem);
@@ -95,6 +120,12 @@ public class SLL<T extends Comparable<T>> {
 			}
 		}
 	}
+	
+	/**
+	 * 
+	 * @param sorter
+	 * @return
+	 */
 	public SLL<T> sort(Comparator<T> sorter){
 		SLL<T> sorted = new SLL<T>();
 		Node<T> pointer = head;	
@@ -107,6 +138,10 @@ public class SLL<T extends Comparable<T>> {
 		return sorted;
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public SLL<T> sort(){
 		SLL<T> sorted = new SLL<T>();
 		Node<T> pointer = head;	
@@ -119,6 +154,11 @@ public class SLL<T extends Comparable<T>> {
 		return sorted;
 	}
 
+	/**
+	 * 
+	 * @param data
+	 * @return
+	 */
 	public Node<T> search(String data) {
 		
 		Node<T> pointer = head;
@@ -137,9 +177,18 @@ public class SLL<T extends Comparable<T>> {
 		return null;
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public Node<T> getHead() {
 		return head;
 	}
+	
+	/**
+	 * 
+	 * @return
+	 */
 	public int size() {	
 		return size;
 	}

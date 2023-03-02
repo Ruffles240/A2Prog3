@@ -11,7 +11,6 @@ import java.util.Scanner;
  * @author Maryam Elahi
  * @date Fall 2020
 */
-
 public class A2 {
 	
 	public String[][] avengerRoster = { { "captainamerica", "rogers" }, { "ironman", "stark" },
@@ -30,17 +29,27 @@ public class A2 {
 	public SLL<Avenger> sortedBottom;
 	public SLL<Avenger> sortedAlpha;
 	
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		A2 a1 = new A2();
 		a1.run();
 	}
-
+	
+	/**
+	 * 
+	 */
 	public void run() {
 		readInput();
 		createdOrderedLists();
 		printResults();
 	}
-
+	
+	/**
+	 * 
+	 */
 	private void createdOrderedLists() {
 		// TODO: 
 		sortedBottom = avengersList.sort(Avenger.avengerBottomRanking);
@@ -90,6 +99,11 @@ public class A2 {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param next
+	 * @return
+	 */
 	private String cleanWord(String next) {
 		// First, if there is an apostrophe, the substring
 		// before the apostrophe is used and the rest is ignored.
@@ -107,8 +121,54 @@ public class A2 {
 	 */
 	private void printResults() {
 		
+		System.out.println("Total number of words: " + totalwordcount);
+		System.out.println("Number of Avengers Mentioned: " + avengersList.size());
+		System.out.println();
+
+		System.out.println("All avengers in the order they appeared in the input stream:");
+		// Todo: Print the list of avengers in the order they appeared in the input
+		// Make sure you follow the formatting example in the sample output
+		Node<Avenger> pointer = avengersList.getHead();
 		
-		Node<Avenger> pointer = sortedAlpha.getHead();
+		while(pointer!=null) {
+			System.out.println(pointer.getData());
+			pointer=pointer.getNext();
+			
+		}
+
+		System.out.println();
+		
+		System.out.println("Top " + topN + " most popular avengers:");
+		// Todo: Print the most popular avengers, see the instructions for tie breaking
+		// Make sure you follow the formatting example in the sample output
+		pointer = sortedTop.getHead();
+		int index = 0;
+		
+		while(pointer!=null && index < 4) {
+			System.out.println(pointer.getData());
+			pointer=pointer.getNext();
+			index++;
+		}
+		
+		System.out.println();
+
+		System.out.println("Top " + topN + " least popular avengers:");
+		// Todo: Print the least popular avengers, see the instructions for tie breaking
+		// Make sure you follow the formatting example in the sample output
+		pointer = sortedBottom.getHead();
+		index = 0;
+		
+		while(pointer!=null && index < 4) { 
+			System.out.println(pointer.getData());
+			pointer=pointer.getNext();
+			index++;
+		}
+		
+		System.out.println();
+
+		System.out.println("All mentioned avengers in alphabetical order:");
+		// Todo: Print the list of avengers in alphabetical order
+		pointer = sortedAlpha.getHead();
 		
 		while(pointer!=null) {
 			System.out.println(pointer.getData());
@@ -116,34 +176,7 @@ public class A2 {
 			
 		}
 		
-		
-		System.out.println("Total number of words: " + totalwordcount);
-		//System.out.println("Number of Avengers Mentioned: " + ??);
 		System.out.println();
-
-		System.out.println("All avengers in the order they appeared in the input stream:");
-		// Todo: Print the list of avengers in the order they appeared in the input
-		// Make sure you follow the formatting example in the sample output
-
-		System.out.println();
-		
-		System.out.println("Top " + topN + " most popular avengers:");
-		// Todo: Print the most popular avengers, see the instructions for tie breaking
-		// Make sure you follow the formatting example in the sample output
-		
-		System.out.println();
-
-		System.out.println("Top " + topN + " least popular avengers:");
-		// Todo: Print the least popular avengers, see the instructions for tie breaking
-		// Make sure you follow the formatting example in the sample output
-		
-		System.out.println();
-
-		System.out.println("All mentioned avengers in alphabetical order:");
-		// Todo: Print the list of avengers in alphabetical order
-		
-		System.out.println();
-		
 		
 	}
 	
