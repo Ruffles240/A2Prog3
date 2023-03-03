@@ -1,4 +1,4 @@
-ppackage Avengers;
+package Avengers;
 
 import java.util.Comparator;
 

@@ -122,6 +122,7 @@ public class A2 {
 	 */
 	private void printResults() {
 		// Todo: Print the list of avengers in the order they appeared in the input
+
 		System.out.println("Total number of words: " + totalwordcount);
 		System.out.println("Number of Avengers Mentioned: " + avengersList.size());
 		System.out.println();
