@@ -1,11 +1,9 @@
-package Avengers;
+ppackage Avengers;
 
 import java.util.Comparator;
 
 /**
- * 
- * 
- *
+ * This class is the comparable class
  * @param <T>
  */
 public class SLL<T extends Comparable<T>> {
@@ -24,7 +22,7 @@ public class SLL<T extends Comparable<T>> {
 	}
 	
 	/**
-	 * 
+	 * Add method
 	 * @param newItem
 	 */
 	public void add(T newItem){
@@ -48,7 +46,7 @@ public class SLL<T extends Comparable<T>> {
 	}
 	
 	/**
-	 * 
+	 * This method adds in order 
 	 * @param newItem
 	 * @param comparator
 	 */
@@ -122,9 +120,9 @@ public class SLL<T extends Comparable<T>> {
 	}
 	
 	/**
-	 * 
+	 * The sort method
 	 * @param sorter
-	 * @return
+	 * @return the sort
 	 */
 	public SLL<T> sort(Comparator<T> sorter){
 		SLL<T> sorted = new SLL<T>();
@@ -139,8 +137,8 @@ public class SLL<T extends Comparable<T>> {
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * SLL sort 
+	 * @return sorted
 	 */
 	public SLL<T> sort(){
 		SLL<T> sorted = new SLL<T>();
@@ -155,9 +153,9 @@ public class SLL<T extends Comparable<T>> {
 	}
 
 	/**
-	 * 
+	 * search method
 	 * @param data
-	 * @return
+	 * @return null
 	 */
 	public Node<T> search(String data) {
 		
@@ -178,16 +176,16 @@ public class SLL<T extends Comparable<T>> {
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * head method
+	 * @return head
 	 */
 	public Node<T> getHead() {
 		return head;
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * size method
+	 * @return size
 	 */
 	public int size() {	
 		return size;
